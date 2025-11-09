@@ -6,12 +6,12 @@ import jakarta.faces.model.SelectItem;
 import jakarta.faces.view.ViewScoped;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
-import jakarta.servlet.http.Part;
+import jakarta.servlet.http.Part; // Important pour l'upload
 import com.tp4_omaressafi.tpwebomaressafi.service.LlmClient;
 
 // Import de LlmClientTavily supprimé
-import com.tp4_omaressafi.tpwebomaressafi.service.LlmClientRag;
-import com.tp4_omaressafi.tpwebomaressafi.service.MagasinEmbeddings;
+import com.tp4_omaressafi.tpwebomaressafi.service.LlmClientRag; // Import du nouveau client
+import com.tp4_omaressafi.tpwebomaressafi.service.MagasinEmbeddings; // Import du service RAG
 
 import java.io.InputStream; // Important pour l'upload
 import java.io.Serializable;
@@ -42,8 +42,8 @@ public class Bb implements Serializable {
 
 
     @Inject
-    private LlmClientRag llmRag;
-
+    private LlmClientRag llmRag; // Par le nouveau client
+    // ========================
 
 
     @Inject
