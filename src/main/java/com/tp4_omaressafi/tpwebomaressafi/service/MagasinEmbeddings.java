@@ -48,7 +48,10 @@ public class MagasinEmbeddings {
 
         // Charger les documents initiaux depuis les ressources
         try {
-            chargerDocumentInitial("rag-2.pdf");
+            // ============ CORRECTION ICI ============
+            // Le fichier s'appelle "rag.pdf", pas "rag-2.pdf"
+            chargerDocumentInitial("rag.pdf");
+            // ========================================
 
             // Changement de 'sport.pdf' à 'music.pdf' (votre demande)
             chargerDocumentInitial("music.pdf");
@@ -90,6 +93,7 @@ public class MagasinEmbeddings {
         try {
             Document document = documentParser.parse(inputStream);
 
+            // Correction de la méthode .add() en .put()
             document.metadata().put("source", documentName);
 
 
